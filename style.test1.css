@@ -15,7 +15,7 @@
 
 .header::before {
     content: '';
-    background-image: linear-gradient(rgba(37, 36, 30, 0.1),rgba(43, 42, 39, 0.8));
+    background-image: linear-gradient(rgba(37, 36, 30, 0.1),rgba(43, 42, 39, 0.5));
     position: absolute;
     width: 100%;
     min-height: 100vh;
@@ -29,7 +29,7 @@ nav {
 }
 
 #logo img {
-    width: 300px;
+    width: 400px;
 }
 
 .navbar ul li {
@@ -43,7 +43,8 @@ nav {
     color: #f2f2f2;
     text-decoration: none;
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 400;
+    
 }
 
 .navbar ul li::after {
@@ -70,7 +71,7 @@ nav {
 .title {
     width: 80%;
     color: #f2f2f2;
-    top: 60%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -78,15 +79,17 @@ nav {
 }
 
 .title h1 {
-    font-size: 35px;
+    font-size: 55px;
 }
 
 .title p {
     margin: 10px 0 40px;
-    font-size: 16px;
+    font-size: 24px;
     color: #f2f2f2;
 }
-
+.title a {
+  font-size: 18px;
+}
 .primary-btn {
     text-decoration: none;
     color: #f2f2f2;
@@ -106,6 +109,12 @@ nav {
 @media(max-width: 700px) {
     .title h1 {
         font-size: 25px
+    }
+    .title p {
+      font-size: 12px;
+    }
+    .title {
+      top: 40%;
     }
     .navbar ul li a{
         display: block;
@@ -132,6 +141,10 @@ nav {
     .navbar ul li:hover::after {
         width: 0
     }
+    #logo img {
+      width: 200px;
+    }
+
 
 }
 /* -----main----- */
@@ -155,13 +168,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
-
-.about img {
-    max-width: 100%
+.about-col img{
+  max-width: 100%;
 }
 .about video {
-  width: 100%
+    width: 100%
 }
 
 .col {
@@ -177,9 +190,9 @@ nav {
 
 .food p, .review p, .about p {
     color: #777;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 52px;
     padding: 10px;
 }
 
@@ -193,6 +206,10 @@ nav {
     .food-row, .review-row, .menu-row{
         flex-direction: column;
     }
+    .food p, .review p, .about p {
+      font-size: 14px;
+      line-height: 24px;
+  }
 }
 
 .food-col {
@@ -220,6 +237,10 @@ nav {
     margin:10px;
 }
 
+figcaption {
+  font-size: 22px;
+}
+
 .review-col img {
     height: 60px;
     margin-left: 5px;
@@ -233,13 +254,13 @@ nav {
 }
 
 .review-col .fa {
-    color: #ff642f;
+    color: #885d63;
 }
 
 .contact-banner {
-    margin: 100px auto;
+    margin: 80px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(resources/banner1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(resources/banner1.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -309,7 +330,7 @@ nav {
 }
 
 .menu-col thead tr {
-    background-color: #ff642f;
+    background-color: #885d63;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -340,6 +361,9 @@ border-bottom: 3px solid #885d63;
 @media(max-width: 700px) {
     .contact {
         flex-direction: column;
+    }
+    figcaption {
+      font-size: 16px;
     }
 }
 .contact-col {
